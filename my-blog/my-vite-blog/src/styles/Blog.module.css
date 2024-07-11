@@ -1,0 +1,36 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  color: inherit; /* Inherit color to respect dark mode */
+}
+
+.date {
+  margin: 1rem 0;
+  color: inherit; /* Inherit color to respect dark mode */
+  text-align: center;
+}
+
+.content {
+  margin-top: 2rem;
+  line-height: 1.6;
+  color: inherit; /* Inherit color to respect dark mode */
+}

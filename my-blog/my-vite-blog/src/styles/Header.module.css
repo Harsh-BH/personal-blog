@@ -1,0 +1,138 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Provide some top margin */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 4rem);
+  z-index: 4; /* Ensure the header is above the carousel */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+  color: #007bff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactButton {
+  background: none;
+  border: 2px solid #2e2e2e;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #2e2e2e;
+  color: #f9f9f9;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .arrow {
+  transform: translateX(5px);
+}
+
+.toggleContainer {
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.toggleLabel:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.toggle:checked + .toggleLabel {
+  background-color: #4caf50;
+}
+
+.toggle:checked + .toggleLabel:before {
+  transform: translateX(24px);
+}
+
+.toggleLabel::after {
+  content: "🌙";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+}
+
+.toggle:checked + .toggleLabel::after {
+  content: "☀️";
+  left: 5px;
+  right: auto;
+}

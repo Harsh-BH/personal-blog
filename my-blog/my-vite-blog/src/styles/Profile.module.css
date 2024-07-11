@@ -1,0 +1,119 @@
+.profile {
+  position: relative;
+  width: 35%; /* Adjust the width as needed */
+  height: auto;
+  overflow: hidden;
+  margin: 20px 20px 0 20px; /* Align to the right with some margin */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for attraction */
+  background-color: #f9f9f9; /* Background color for the profile container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileInner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.profileHeader {
+  width: 100%;
+  height: 40%;
+  background-color: #e9ecef; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.profileContent {
+  padding: 20px;
+}
+
+.subTitle {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.statLabel {
+  color: #6c757d;
+}
+
+.followButton {
+  background-color: #ffc107;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.followButton:hover {
+  background-color: #e0a800;
+}
+
+.description {
+  color: #6c757d;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.socialLinks a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.socialLinks a:hover {
+  color: #0056b3;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
