@@ -1,0 +1,144 @@
+/* BlogPage.module.css */
+
+.blogPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure it covers the full height */
+  background-color: #121212; /* Same as global background color */
+  color: #ffffff; /* Ensure text is readable on the dark background */
+  padding-top: 80px; /* Adjust for fixed header height */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(
+    31,
+    31,
+    31,
+    0.9
+  ); /* Dark semi-transparent background */
+  color: #ffffff; /* White text for header */
+  position: fixed; /* Fixed positioning */
+  top: 0;
+  left: 0;
+  z-index: 4; /* Ensure the header is above other content */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactButton {
+  background: none;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.mainContent {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.tableOfContents {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  position: sticky;
+  top: 100px; /* Adjust as needed */
+}
+
+.tableOfContents h2 {
+  margin-top: 0;
+}
+
+.tableOfContents ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tableOfContents ul ul {
+  padding-left: 1rem;
+}
+
+.tableOfContents li {
+  margin: 0.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #ff4081;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.blogText {
+  margin-top: 1rem;
+  line-height: 1.6;
+}

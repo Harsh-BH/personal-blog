@@ -1,15 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .profile {
   position: relative;
-  width: 35%; /* Adjust the width as needed */
+  width: 35%;
   height: auto;
   overflow: hidden;
-  margin: 20px 20px 0 20px; /* Align to the right with some margin */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for attraction */
-  background-color: #f9f9f9; /* Background color for the profile container */
+  margin: 20px 20px 0 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #1f1f1f; /* Dark theme background */
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .profileInner {
@@ -20,23 +28,36 @@
   align-items: center;
   height: 100%;
   text-align: center;
+  color: #ffffff; /* Light text color */
+  font-family: "Roboto", sans-serif;
 }
 
 .profileHeader {
   width: 100%;
   height: 40%;
-  background-color: #e9ecef; /* Adjust as needed */
+  background-color: #333; /* Darker background */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px 15px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.profileHeader:hover {
+  background-color: #444;
 }
 
 .profileImage {
-  width: 80px;
-  height: 80px;
+  width: 100px; /* Increased size */
+  height: 100px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid #007bff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: rotate(360deg);
+  border-color: #ff4081;
 }
 
 .profileContent {
@@ -44,8 +65,9 @@
 }
 
 .subTitle {
-  color: #6c757d;
+  color: #bbbbbb;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .stats {
@@ -64,29 +86,31 @@
 .statNumber {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #ff4081;
 }
 
 .statLabel {
-  color: #6c757d;
+  color: #bbbbbb;
 }
 
 .followButton {
-  background-color: #ffc107;
+  background-color: #007bff;
   border: none;
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
   margin-bottom: 20px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .followButton:hover {
-  background-color: #e0a800;
+  background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 .description {
-  color: #6c757d;
+  color: #bbbbbb;
 }
 
 .socialLinks {
@@ -106,7 +130,7 @@
 }
 
 .socialLinks a:hover {
-  color: #0056b3;
+  color: #ff4081;
 }
 
 .dot {
@@ -116,4 +140,9 @@
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.socialLinks a:hover .dot {
+  background-color: #ff4081;
 }

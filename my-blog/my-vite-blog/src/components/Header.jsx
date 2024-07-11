@@ -26,9 +26,32 @@ const Header = () => {
     setDarkMode(!darkMode);
   };
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        document
+          .querySelector(`.${styles.header}`)
+          .classList.add(styles.hidden);
+      } else {
+        document
+          .querySelector(`.${styles.header}`)
+          .classList.remove(styles.hidden);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>HEVA</div>
+      <div className={styles.logo}>Tech Blogs</div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>

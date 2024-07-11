@@ -1,23 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Absolute positioning */
-  top: 20px; /* Provide some top margin */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  position: fixed; /* Fixed positioning */
+  top: 10px; /* Add some top margin */
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 4rem);
   z-index: 4; /* Ensure the header is above the carousel */
+  transition: top 0.3s;
+}
+
+.header.hidden {
+  top: -100px; /* Hide the header when scrolling down */
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size */
   font-weight: bold;
-  color: #2e2e2e;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add some shadow for depth */
+  font-family: "Pacifico", cursive; /* A different, more attractive font */
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .nav {
@@ -35,13 +64,14 @@
 
 .navItem a {
   text-decoration: none;
-  color: #2e2e2e;
+  color: #f9f9f9; /* Light text color */
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navItem a:hover {
-  color: #007bff;
+  color: #ff7e5f; /* Hover color matching the logo gradient */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .actions {
@@ -51,22 +81,26 @@
 }
 
 .contactButton {
-  background: none;
-  border: 2px solid #2e2e2e;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  border: none;
   padding: 0.5rem 1rem;
   border-radius: 30px;
   font-size: 1rem;
   font-weight: 500;
-  color: #2e2e2e;
+  color: #fff; /* Light text color */
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contactButton:hover {
-  background-color: #2e2e2e;
-  color: #f9f9f9;
+  background: linear-gradient(
+    90deg,
+    #feb47b,
+    #ff7e5f
+  ); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .arrow {
@@ -129,10 +163,12 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.8rem;
+  color: #f9f9f9; /* Light icon color */
 }
 
 .toggle:checked + .toggleLabel::after {
   content: "☀️";
   left: 5px;
   right: auto;
+  color: #4caf50; /* Icon color when checked */
 }
