@@ -38,14 +38,14 @@ const Profile = () => {
               <span className={styles.dot}></span> GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/Harsh-BH/"
+              href="https://www.linkedin.com/in/harsh-bhatt-114a2a293/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className={styles.dot}></span> LinkedIn
             </a>
             <a
-              href="https://www.kaggle.com/Harsh-BH"
+              href="https://www.kaggle.com/iharshbhatt"
               target="_blank"
               rel="noopener noreferrer"
             >

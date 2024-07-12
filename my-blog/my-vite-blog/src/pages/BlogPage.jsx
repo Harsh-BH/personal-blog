@@ -1,4 +1,6 @@
+// BlogPage.js
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "../styles/BlogPage.module.css";
 import Header from "../components/Header";

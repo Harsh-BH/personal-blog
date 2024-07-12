@@ -33,6 +33,11 @@
   animation: bounce 2s infinite;
 }
 
+.icon {
+  width: 56px; /* adjust the width as needed */
+  height: 56px; /* adjust the height as needed */
+}
+
 @keyframes bounce {
   0%,
   20%,

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from "../styles/Header.module.css";
+import FitHubLogo from "../assets/fithub.svg";
+import LinkedInLogo from "../assets/linkedin.svg";
+import KaggleLogo from "../assets/kaggle.svg";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,17 +58,36 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link to="/treatments">Treatments</Link>
+            <a
+              href="https://github.com/Harsh-BH"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={FitHubLogo} alt="FitHub" className={styles.icon} />
+            </a>
           </li>
           <li className={styles.navItem}>
-            <Link to="/about">About</Link>
+            <a
+              href="https://www.linkedin.com/in/harsh-bhatt-114a2a293/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={LinkedInLogo} alt="LinkedIn" className={styles.icon} />
+            </a>
+          </li>
+          <li className={styles.navItem}>
+            <a
+              href="https://www.kaggle.com/iharshbhatt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={KaggleLogo} alt="Kaggle" className={styles.icon} />
+            </a>
           </li>
         </ul>
       </nav>
       <div className={styles.actions}>
-        <button className={styles.contactButton}>
-          Contact Us <span className={styles.arrow}>&#8594;</span>
-        </button>
+        <button className={styles.contactButton}></button>
         <div className={styles.toggleContainer}>
           <input
             type="checkbox"

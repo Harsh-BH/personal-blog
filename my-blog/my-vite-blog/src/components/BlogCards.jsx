@@ -1,6 +1,4 @@
-// BlogCards.js
 import React from "react";
-import { Link } from "react-router-dom";
 import { blogPosts } from "../constants";
 import styles from "../styles/BlogCards.module.css";
 
@@ -9,16 +7,15 @@ const BlogCards = () => {
     <section className={styles.cardsWrapper}>
       {blogPosts.map((post) => (
         <div key={post.id} className={styles.cardGridSpace}>
-          <div className={styles.num}>{post.id}</div>
-          <Link
+          <div className={styles.num}></div>
+          <a
             className={styles.card}
-            to={post.link}
+            href={post.link}
             style={{ "--bg-img": `url(${post.imageUrl})` }}
           >
-            <div>
-              <h1>{post.title}</h1>
-              <p>{post.description}</p>
+            <div className={styles.cardContent}>
               <div className={styles.date}>{post.date}</div>
+              <h1>{post.title}</h1>
               <div className={styles.tags}>
                 {post.tags.map((tag, index) => (
                   <div key={index} className={styles.tag}>
@@ -27,7 +24,7 @@ const BlogCards = () => {
                 ))}
               </div>
             </div>
-          </Link>
+          </a>
         </div>
       ))}
     </section>
